@@ -40,6 +40,13 @@ public class Vetor {
         return false;
     }
 
+    public String busca(int posicao){
+        if (!(posicao >= 0 && posicao < tamanho)){
+            throw  new IllegalArgumentException("Posição inválidda!");
+        }
+        return this.elementos[posicao];
+    }
+
     public int tamanho(){
         return  this.tamanho;
     }
